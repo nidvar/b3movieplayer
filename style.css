@@ -63,6 +63,9 @@ button:focus{
 .hideMe{
     display:none;
 }
+#the_time{
+    padding:0 5px 0 5px;
+}
 @media (max-width:800px){
     #video,#controls{
         width:90%;

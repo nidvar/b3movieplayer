@@ -8,7 +8,6 @@ const play_video =()=>{
     pause_button.classList.remove('hideMe')
     play_button.classList.add('hideMe')
     video_file.play();
-    the_time.innerHTML = '00:00'
 }
 
 const pause_video = ()=>{
