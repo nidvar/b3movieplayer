@@ -51,7 +51,7 @@ video_file.addEventListener('timeupdate',()=>{
     progress_bar.value = calculate_progress();
 })
 
-progress_bar.addEventListener('click',(e)=>{
+progress_bar.addEventListener('change',(e)=>{
     video_file.currentTime = video_file.duration * (e.target.value/100)
 })
 pause_button.addEventListener('click',pause_video)
