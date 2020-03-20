@@ -18,22 +18,17 @@ const pause_video = ()=>{
 const convert_time = (time)=>{
     const mins = time/60
     const seconds = time%60
-    mins<10?console.log(0+mins.toFixed(0)):console.log(mins.toFixed(0))
-    seconds<10?console.log(0+seconds.toFixed(0)):console.log(seconds.toFixed(0))
     return `${mins.toFixed(0)}:${seconds.toFixed(0)}`
 }
 
 setTimeout(()=>{
-    console.log(video_file.duration)
     the_time.innerHTML = convert_time(video_file.duration)
 },500)
 
 const calculate_time = ()=>{
     let mins=0;
     let seconds=0;
-
     seconds = video_file.currentTime.toFixed(0)
-
     if(seconds >= 60){
         seconds = video_file.currentTime.toFixed(0)-60
         mins = 1;
@@ -41,17 +36,10 @@ const calculate_time = ()=>{
     if(seconds<10){
         seconds = '0'+seconds
     }
-
     return `${mins}:${seconds}`
-
 }
 
-
-
-
 video_file.addEventListener('timeupdate',()=>{
-    console.log(video_file.currentTime.toFixed(0))
-
     the_time.innerHTML = calculate_time()
 })
 

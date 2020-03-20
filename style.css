@@ -14,10 +14,6 @@ body{
     padding:0 0 40px 0;
 }
 
-h1{
-    color:white;
-}
-
 #video{
     cursor: pointer;
     width:60%;
